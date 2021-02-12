@@ -1,15 +1,16 @@
 import { createMuiTheme } from 'cloudhub-components/dist/mui/core';
+
 import shadows from './shadows';
 
-const getTheme = ({
-  mainFontFamily,
-  primaryColors,
-  secondaryColors,
-  tertiaryColors,
-  textColors,
-  backgroundColors
-}) =>
-  createMuiTheme({
+const getTheme = ({ sizes, fonts, colors }) => {
+  const {
+    primaryColors,
+    secondaryColors
+    // tertiaryColors,
+    // textColors,
+    // backgroundColors
+  } = colors;
+  return createMuiTheme({
     palette: {
       primary: {
         main: '#3c44b1',
@@ -73,11 +74,15 @@ const getTheme = ({
       }
     },
     typography: {
-      fontFamily: [`${mainFontFamily}`, 'Heebo', 'sans-serif'].join(','),
+      fontFamily: [`${fonts.body.fontFamily}`, 'Heebo', 'sans-serif'].join(','),
       htmlFontSize: 16,
       fontSize: 14
     },
-    shadows
+    shadows,
+    colors: { ...colors },
+    sizes: { ...sizes },
+    fonts: { ...fonts }
   });
+};
 
 export default getTheme;
