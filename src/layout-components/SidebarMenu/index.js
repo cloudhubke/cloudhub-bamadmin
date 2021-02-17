@@ -6,7 +6,6 @@ import { Collapse } from 'cloudhub-components/dist/mui/core';
 
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { NavLink } from 'react-router-dom';
-import { setSidebarToggleMobile } from '../../reducers/ThemeOptions';
 
 import SidebarUserbox from '../SidebarUserbox';
 

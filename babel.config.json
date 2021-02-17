@@ -6,5 +6,11 @@
     "@babel/plugin-proposal-class-properties"
   ],
 
-  "only": ["./src/theme", "./src/reducers", "./src/utils", "src/components.js"]
+  "only": [
+    "./src/theme",
+    "./src/components",
+    "./src/reducers",
+    "./src/utils",
+    "src/components.js"
+  ]
 }

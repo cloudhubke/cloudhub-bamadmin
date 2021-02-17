@@ -2,8 +2,6 @@ import React from 'react';
 
 import clsx from 'clsx';
 
-import { setSidebarToggleMobile } from '../../reducers/ThemeOptions';
-
 import HeaderDots from '../../layout-components/HeaderDots';
 import HeaderDrawer from '../../layout-components/HeaderDrawer';
 import HeaderUserbox from '../../layout-components/HeaderUserbox';
