@@ -8,35 +8,31 @@ import CountUp from 'react-countup';
 
 import AddAlertTwoToneIcon from '@material-ui/icons/AddAlertTwoTone';
 import AssignmentTurnedInTwoToneIcon from '@material-ui/icons/AssignmentTurnedInTwoTone';
-import HomeWorkTwoToneIcon from '@material-ui/icons/HomeWorkTwoTone';
 import PrintTwoToneIcon from '@material-ui/icons/PrintTwoTone';
 
-export default function ScrollableListBox({ title = '' }) {
+export default function ScrollableListBox({
+  title = '',
+  headerAction,
+  height
+}) {
   return (
     <>
       <Card
         className="card-box overflow-hidden p-0 mb-spacing-6-x2"
-        style={{ height: 800, backgroundColor: 'cyan' }}>
+        style={{ minHeight: height }}>
         <div className="card-header bg-secondary">
           <div className="card-header--title">
             <h5 className="font-size-lg mb-0 line-height-1 py-2 font-weight-bold">
               {title}
             </h5>
           </div>
-          <div>
-            <Button className="btn-neutral-dark btn-pill" size="small">
-              <span className="btn-wrapper--icon">
-                <FontAwesomeIcon
-                  icon={['fas', 'arrow-down']}
-                  className="font-size-xs"
-                />
-              </span>
-              <span className="btn-wrapper--label">View details</span>
-            </Button>
-          </div>
+
+          <div>{headerAction}</div>
         </div>
         <div className="shadow-overflow">
-          <PerfectScrollbar style={{ backgroundColor: 'cyan' }}>
+          <PerfectScrollbar
+            className="scroll-area-md"
+            options={{ wheelPropagation: false }}>
             <div className="d-flex align-items-center justify-content-between px-4 py-3">
               <div className="d-flex">
                 <AddAlertTwoToneIcon className="h1 d-block mr-3 text-warning" />
@@ -79,28 +75,7 @@ export default function ScrollableListBox({ title = '' }) {
               </div>
             </div>
             <div className="divider" />
-            <div className="d-flex align-items-center justify-content-between px-4 py-3">
-              <div className="d-flex">
-                <HomeWorkTwoToneIcon className="h1 d-block mr-3 text-danger" />
-                <div>
-                  <b>Sales</b>
-                  <div className="text-black-50">
-                    Total average weekly report
-                  </div>
-                </div>
-              </div>
-              <div className="font-weight-bold text-warning font-size-lg">
-                <CountUp
-                  start={0}
-                  end={483}
-                  duration={6}
-                  delay={2}
-                  separator=""
-                  decimals={0}
-                  decimal=","
-                />
-              </div>
-            </div>
+
             <div className="divider" />
             <div className="d-flex align-items-center justify-content-between px-4 py-3">
               <div className="d-flex">

@@ -1,10 +1,8 @@
 //  Core
 
-
 // Dropdown menu
 
 .MuiMenu-paper {
-
   & .bg-composed-wrapper {
     margin: (-($dropdown-padding-y)) -1px -2px;
     z-index: 5;
@@ -26,6 +24,10 @@
 
 .dropdown-menu-xxl {
   width: 30rem;
+}
+
+.dropdown-menu-xxxl {
+  width: 45rem;
 }
 
 .dropdown-toggle::after {

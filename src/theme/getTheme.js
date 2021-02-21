@@ -2,7 +2,7 @@ import { createMuiTheme } from 'cloudhub-components/dist/mui/core';
 
 import shadows from './shadows';
 
-const getTheme = ({ sizes, fonts, colors }) => {
+const getTheme = ({ mainFonFamily, sizes, fonts, colors }) => {
   const {
     primaryColors,
     secondaryColors
@@ -74,7 +74,7 @@ const getTheme = ({ sizes, fonts, colors }) => {
       }
     },
     typography: {
-      fontFamily: [`${fonts.body.fontFamily}`, 'Heebo', 'sans-serif'].join(','),
+      fontFamily: [`${mainFonFamily}`, 'sans-serif'].join(','),
       htmlFontSize: 16,
       fontSize: 14
     },
